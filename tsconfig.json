@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "module": "system",
+        "outFile": "bin/bundle.js",
+        "target": "ES6"
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "**/*.spec.ts"]
+}
