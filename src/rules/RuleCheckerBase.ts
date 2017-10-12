@@ -1,4 +1,6 @@
-abstract class RuleCheckerBase {
+import Board from "../model/Board";
+
+export default abstract class RuleCheckerBase {
 	constructor(private board: Board) {}
 
 	public abstract isGameOver(): boolean;
