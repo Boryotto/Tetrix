@@ -1,4 +1,6 @@
-class Board {
+import GamePiece from "./GamePiece";
+
+export default class Board {
 	public contents: GamePiece[][][];
 
 	constructor(
@@ -12,7 +14,7 @@ class Board {
 			for (let x = 0; x < width; x++) {
 				floor[x] = new Array<GamePiece>(depth);
 			}
-			this.contents[height] = floor;
+			this.contents[y] = floor;
 		}
 	}
 }
