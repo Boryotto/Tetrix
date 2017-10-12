@@ -2,6 +2,7 @@
 
 src/*.js
 bin/*
+build/*
 
 # Logs
 logs
