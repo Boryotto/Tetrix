@@ -8,7 +8,7 @@ module.exports = {
 		publicPath: "/bin",
 		filename: "bundle.js"
 	},
-	devtool: "#eval-source-map",
+	devtool: "source-map",
 	resolve: {
 		// Add '.ts' and '.tsx' as a resolvable extension.
 		extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
@@ -16,7 +16,9 @@ module.exports = {
 	module: {
 		loaders: [
 			// all files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'
-			{ test: /\.tsx?$/, loader: "ts-loader" }
+			{ test: /\.tsx?$/, loader: "ts-loader" },
+			// All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
+			{ enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
 		]
 	}
 };
